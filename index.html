@@ -7,157 +7,187 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="src/style.css">
+    <style>
+        #error-display {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ef4444;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-family: sans-serif;
+            display: none;
+            z-index: 9999;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
+    <div id="error-display"></div>
     <div id="cv-container"></div>
 
+    <div id="lang-selector">
+        <div class="lang-options">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="hu">HU</button>
+        </div>
+    </div>
+
     <script type="module">
-        import cvData from './src/data/cv.json';
+        import cvDataRaw from './src/data/cv.json';
 
-        async function renderCV() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const lang = urlParams.get('lang') || 'en';
-            const job = urlParams.get('job');
+        async function renderCV(forceLang = null) {
+            const errorDisplay = document.getElementById('error-display');
+            errorDisplay.style.display = 'none';
 
-            let d = JSON.parse(JSON.stringify(cvData));
-            if (job) {
-                try {
-                    const jobData = await import(`./src/data/jobs/${job}.json`);
-                    for (const key of Object.keys(jobData.default)) {
-                        if (key === 'personal') {
-                            d.personal = { ...d.personal, ...jobData.default.personal };
-                        } else if (key === 'experience' && Array.isArray(jobData.default.experience)) {
-                            d.experience = [...jobData.default.experience, ...d.experience];
-                        } else {
-                            d[key] = jobData.default[key];
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                const lang = forceLang || urlParams.get('lang') || 'en';
+                const job = urlParams.get('job');
+
+                const cvData = cvDataRaw.default || cvDataRaw;
+                let d = JSON.parse(JSON.stringify(cvData));
+                
+                if (job) {
+                    try {
+                        const jobDataRaw = await import(`./src/data/jobs/${job}.json`);
+                        const jobData = jobDataRaw.default || jobDataRaw;
+                        
+                        for (const key of Object.keys(jobData)) {
+                            if (key === 'personal') {
+                                d.personal = { ...d.personal, ...jobData.personal };
+                            } else if (key === 'experience' && Array.isArray(jobData.experience)) {
+                                d.experience = [...jobData.experience, ...d.experience];
+                            } else {
+                                d[key] = jobData[key];
+                            }
                         }
+                    } catch (e) {
+                        console.warn(`Job data for "${job}" not found.`, e);
                     }
-                } catch (e) {
-                    console.warn(`Job data for "${job}" not found.`);
                 }
-            }
 
-            const L = lang;
-            const p = d.personal;
+                const L = lang;
+                const p = d.personal;
 
-            const expHTML = d.experience.map(exp => `
-                <div class="exp-item">
-                    <div class="exp-header">
-                        <div class="exp-title">${exp.title[L]}</div>
-                        <div class="exp-year">${exp.year}</div>
+                const expHTML = d.experience.map(exp => `
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-title">${exp.title[L]}</div>
+                            <div class="exp-year">${L === 'hu' ? exp.year.replace('Present', 'Jelenleg') : exp.year}</div>
+                        </div>
+                        <div class="exp-company">${exp.company[L]}</div>
+                        <ul class="exp-points">
+                            ${exp.points[L].map(pt => `<li>${pt}</li>`).join('')}
+                        </ul>
+                        ${exp.links ? `<div class="exp-links">${exp.links.map(lnk => `<a class="exp-link" href="${lnk.url}" target="_blank">${lnk.url}</a>`).join('<span class="exp-link-sep">·</span>')}</div>` : ''}
                     </div>
-                    <div class="exp-company">${exp.company[L]}</div>
-                    <ul class="exp-points">
-                        ${exp.points[L].map(pt => `<li>${pt}</li>`).join('')}
-                    </ul>
-                    ${exp.links ? `<div class="exp-links">${exp.links.map(lnk => `<a class="exp-link" href="${lnk.url}" target="_blank">${lnk.url}</a>`).join('<span class="exp-link-sep">·</span>')}</div>` : ''}
-                </div>
-            `).join('');
+                `).join('');
 
-            const techHTML = d.techstack.categories.map(cat => `
-                <div class="tech-category">
-                    <div class="tech-category-label">${cat.label[L]}</div>
-                    <div class="tech-tags">
-                        ${cat.items.map(item => `<span class="tech-tag">${item}</span>`).join('')}
+                const techHTML = d.techstack.categories.map(cat => `
+                    <div class="tech-category">
+                        <div class="tech-category-label">${cat.label[L]}</div>
+                        <div class="tech-tags">
+                            ${cat.items.map(item => `<span class="tech-tag">${item}</span>`).join('')}
+                        </div>
                     </div>
-                </div>
-            `).join('');
+                `).join('');
 
-            const html = `
-                <div class="cv-page">
-
-                    <!-- SIDEBAR -->
-                    <aside class="sidebar">
-                        <div>
-                            <div class="sidebar-name">${p.name[L]}</div>
-                            <div class="sidebar-title">${p.title[L]}</div>
-                        </div>
-
-                        <div class="sidebar-divider"></div>
-
-                        <div>
-                            <div class="sidebar-section-label">${L === 'hu' ? 'Elérhetőség' : 'Contact'}</div>
-                            <ul class="contact-list">
-                                <li>${p.contact.phone}</li>
-                                <li><a href="mailto:${p.contact.email}">${p.contact.email}</a></li>
-                                <li><a href="https://${p.contact.website}">${p.contact.website}</a></li>
-                                <li>${p.contact.linkedin}</li>
-                                <li>${p.contact.github}</li>
-                            </ul>
-                        </div>
-
-                        <div class="sidebar-divider"></div>
-
-                        <div>
-                            <div class="sidebar-section-label">${L === 'hu' ? 'Tanulmányok' : 'Education'}</div>
-                            <div class="edu-degree">${d.studies.degree[L]}</div>
-                            <div class="edu-inst">${d.studies.institution[L]}</div>
-                            <div class="edu-year">${d.studies.year}</div>
-                        </div>
-
-                        <div class="sidebar-divider"></div>
-
-                        <div>
-                            <div class="sidebar-section-label">${L === 'hu' ? 'Nyelvtudás' : 'Languages'}</div>
-                            ${d.languages.map(l => `
-                                <div class="lang-item">
-                                    <div class="lang-name">${l.name[L]}</div>
-                                    <div class="lang-level">${l.level[L]}</div>
-                                </div>
-                            `).join('')}
-                        </div>
-
-                        <div class="sidebar-divider"></div>
-
-                        <div>
-                            <div class="sidebar-section-label">${d.strengths.title[L]}</div>
-                            <ul class="sidebar-list">
-                                ${d.strengths.items.map(i => `<li>${i[L]}</li>`).join('')}
-                            </ul>
-                        </div>
-
-                        <div class="sidebar-divider"></div>
-
-                        <div>
-                            <div class="sidebar-section-label">${d.hobbies.title[L]}</div>
-                            <ul class="sidebar-list">
-                                ${d.hobbies.items.map(i => `<li>${i[L]}</li>`).join('')}
-                            </ul>
-                        </div>
-                    </aside>
-
-                    <!-- MAIN CONTENT -->
-                    <main class="main">
-                        <div class="intro-text">${p.intro[L]}</div>
-
-                        <div>
-                            <div class="section-header">
-                                <span class="section-title">${L === 'hu' ? 'Tapasztalat & Projektek' : 'Experience & Projects'}</span>
-                                <div class="section-line"></div>
+                const html = `
+                    <div class="cv-page">
+                        <aside class="sidebar">
+                            <div>
+                                <div class="sidebar-name">${p.name[L]}</div>
+                                <div class="sidebar-title">${p.title[L]}</div>
                             </div>
-                            ${expHTML}
-                        </div>
-                    </main>
-
-                    <!-- TECH STACK FOOTER -->
-                    <footer class="techstack-footer">
-                        <div class="section-header" style="margin-bottom:10px;">
-                            <span class="section-title">${L === 'hu' ? 'Technológiák' : 'Tech Stack'}</span>
-                            <div class="section-line"></div>
-                        </div>
-                        <div class="techstack-grid">
-                            ${techHTML}
-                        </div>
-                    </footer>
-
-                </div>
-            `;
-
-            document.getElementById('cv-container').innerHTML = html;
+                            <div class="sidebar-divider"></div>
+                            <div>
+                                <div class="sidebar-section-label">${L === 'hu' ? 'Elérhetőség' : 'Contact'}</div>
+                                <ul class="contact-list">
+                                    <li>${p.contact.phone}</li>
+                                    <li><a href="mailto:${p.contact.email}">${p.contact.email}</a></li>
+                                    <li><a href="https://${p.contact.website}" target="_blank">${p.contact.website}</a></li>
+                                    <li><a href="https://${p.contact.linkedin}" target="_blank">${p.contact.linkedin}</a></li>
+                                    <li><a href="https://${p.contact.github}" target="_blank">${p.contact.github}</a></li>
+                                </ul>
+                            </div>
+                            <div class="sidebar-divider"></div>
+                            <div>
+                                <div class="sidebar-section-label">${L === 'hu' ? 'Tanulmányok' : 'Education'}</div>
+                                <div class="edu-degree">${d.studies.degree[L]}</div>
+                                <div class="edu-inst">${d.studies.institution[L]}</div>
+                                <div class="edu-year">${L === 'hu' ? d.studies.year.replace('Present', 'Jelenleg') : d.studies.year}</div>
+                            </div>
+                            <div class="sidebar-divider"></div>
+                            <div>
+                                <div class="sidebar-section-label">${L === 'hu' ? 'Nyelvtudás' : 'Languages'}</div>
+                                ${d.languages.map(l => `
+                                    <div class="lang-item">
+                                        <div class="lang-name">${l.name[L]}</div>
+                                        <div class="lang-level">${l.level[L]}</div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                            <div class="sidebar-divider"></div>
+                            <div>
+                                <div class="sidebar-section-label">${d.strengths.title[L]}</div>
+                                <ul class="sidebar-list">
+                                    ${d.strengths.items.map(i => `<li>${i[L]}</li>`).join('')}
+                                </ul>
+                            </div>
+                            <div class="sidebar-divider"></div>
+                            <div>
+                                <div class="sidebar-section-label">${d.hobbies.title[L]}</div>
+                                <ul class="sidebar-list">
+                                    ${d.hobbies.items.map(i => `<li>${i[L]}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </aside>
+                        <main class="main">
+                            <div class="intro-text">${p.intro[L]}</div>
+                            <div>
+                                <div class="section-header">
+                                    <span class="section-title">${L === 'hu' ? 'Tapasztalat & Projektek' : 'Experience & Projects'}</span>
+                                    <div class="section-line"></div>
+                                </div>
+                                ${expHTML}
+                            </div>
+                        </main>
+                        <section class="techstack-section">
+                            <div class="section-header" style="margin-bottom:10px;">
+                                <span class="section-title">${L === 'hu' ? 'Technológiák' : 'Tech Stack'}</span>
+                            </div>
+                            <div class="techstack-grid">
+                                ${techHTML}
+                            </div>
+                        </section>
+                    </div>
+                `;
+                document.getElementById('cv-container').innerHTML = html;
+            } catch (err) {
+                console.error("Critical rendering error:", err);
+                errorDisplay.style.display = 'block';
+                errorDisplay.innerText = "Hiba a CV betöltésekor: " + err.message;
+            }
         }
 
         renderCV();
+
+        // UI Interaction Logic
+        document.addEventListener('click', (e) => {
+            // Language Switching
+            if (e.target.classList.contains('lang-btn')) {
+                const lang = e.target.dataset.lang;
+                
+                document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+                
+                renderCV(lang);
+            }
+        });
     </script>
 </body>
 </html>
