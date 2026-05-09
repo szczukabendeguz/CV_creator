@@ -1,0 +1,232 @@
+:root {
+    --sidebar-bg: #ddeaf7;
+    --sidebar-border: #b8d0ea;
+    --accent-dark: #1a3560;   /* dark blue – headings, title */
+    --accent-mid: #2d5fa6;    /* mid blue – company, labels, links */
+    --text-body: #1e1e2e;     /* near-black for body */
+    --text-muted: #4a5568;    /* muted dark gray */
+    --border: #ccd8e8;
+    --bg: #ffffff;
+    --font: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font);
+    background: #c8d8e8;
+    color: var(--text-body);
+    line-height: 1.5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+/* ── Page Shell ─────────────────────────────── */
+.cv-page {
+    width: 210mm;
+    height: 297mm;
+    background: var(--bg);
+    margin: 20px auto;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.15);
+    display: grid;
+    grid-template-columns: 62mm 1fr;
+    grid-template-rows: 1fr auto;
+    overflow: hidden;
+}
+
+@media print {
+    body { background: white; }
+    .cv-page { margin: 0; box-shadow: none; }
+}
+
+/* ── Sidebar ─────────────────────────────────── */
+.sidebar {
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--sidebar-border);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    grid-row: 1 / 3;
+}
+
+.sidebar-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent-dark);
+    line-height: 1.2;
+}
+
+.sidebar-title {
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--accent-mid);
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.sidebar-divider {
+    height: 1px;
+    background: var(--sidebar-border);
+}
+
+.sidebar-section-label {
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: var(--accent-mid);
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+/* Contact */
+.contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.contact-list li { font-size: 10.5px; color: var(--text-body); line-height: 1.4; }
+.contact-list li::before { content: none; }
+.contact-list a { color: var(--accent-mid); text-decoration: none; }
+
+/* Sidebar generic list */
+.sidebar-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.sidebar-list li {
+    font-size: 10.5px;
+    color: var(--text-body);
+    padding-left: 11px;
+    position: relative;
+    line-height: 1.4;
+}
+.sidebar-list li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 5px;
+    width: 3px; height: 3px;
+    border-radius: 50%;
+    background: var(--accent-mid);
+}
+
+/* Education / Languages */
+.edu-degree { font-size: 11px; font-weight: 700; color: var(--accent-dark); }
+.edu-inst   { font-size: 10px; color: var(--text-body); margin-top: 1px; }
+.edu-year   { font-size: 9.5px; color: var(--text-muted); margin-top: 1px; }
+
+.lang-item  { margin-bottom: 6px; }
+.lang-name  { font-size: 11px; font-weight: 700; color: var(--accent-dark); }
+.lang-level { font-size: 9.5px; color: var(--text-muted); }
+
+/* ── Main Area ───────────────────────────────── */
+.main {
+    padding: 30px 24px 14px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Intro */
+.intro-text {
+    font-size: 10.5px;
+    color: var(--text-muted);
+    line-height: 1.65;
+    border-left: 2px solid var(--accent-mid);
+    padding-left: 10px;
+}
+
+/* Section Header */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.section-title {
+    font-size: 7.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-mid);
+    white-space: nowrap;
+}
+.section-line { flex: 1; height: 1px; background: var(--border); }
+
+/* Experience Items */
+.exp-item {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+}
+.exp-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1px;
+}
+.exp-title  { font-size: 11px; font-weight: 700; color: var(--accent-dark); }
+.exp-year   { font-size: 8.5px; color: var(--text-muted); font-weight: 500; white-space: nowrap; }
+.exp-company { font-size: 9px; color: var(--accent-mid); font-weight: 600; margin-bottom: 4px; }
+
+.exp-points { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+.exp-points li {
+    font-size: 9.5px;
+    color: var(--text-body);
+    line-height: 1.5;
+    padding-left: 10px;
+    position: relative;
+}
+.exp-points li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--accent-mid);
+    font-weight: 700;
+}
+
+/* Portfolio links – bottom right, very faint */
+.exp-links  { text-align: right; margin-top: 3px; }
+.exp-link   { font-size: 7.5px; color: #8aaccc; text-decoration: none; font-style: italic; }
+.exp-link-sep { margin: 0 4px; color: var(--border); font-style: normal; }
+
+/* ── Tech Stack Footer ───────────────────────── */
+.techstack-footer {
+    background: var(--sidebar-bg);
+    border-top: 1px solid var(--sidebar-border);
+    padding: 10px 24px;
+    grid-column: 2 / 3;
+}
+
+.techstack-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+}
+
+.tech-category { flex: 0 0 auto; }
+
+.tech-category-label {
+    font-size: 6.5px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-mid);
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.tech-tags { display: flex; flex-wrap: wrap; gap: 0; }
+
+/* No borders – plain comma-separated look handled in JS */
+.tech-tag {
+    font-size: 8.5px;
+    color: var(--text-body);
+    font-weight: 400;
+}
+.tech-tag:not(:last-child)::after {
+    content: ',';
+    margin-right: 4px;
+    color: var(--text-muted);
+}

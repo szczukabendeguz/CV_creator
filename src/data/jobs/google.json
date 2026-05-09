@@ -1,0 +1,21 @@
+{
+  "personal": {
+    "title": {
+      "en": "Junior Fullstack Developer (Google Applicant)",
+      "hu": "Junior Fullstack Fejlesztő"
+    }
+  },
+  "experience": [
+    {
+      "year": "2024",
+      "title": {
+        "en": "Advanced AI Research Project",
+        "hu": "Haladó AI Kutatási Projekt"
+      },
+      "description": {
+        "en": "Customized experience for Google. Working on large scale AI integration and cloud architectures.",
+        "hu": "Személyre szabott tapasztalat a Google számára. Nagy léptékű AI integráción és felhő architektúrákon dolgoztam."
+      }
+    }
+  ]
+}

@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bendegúz Szczuka | Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS (Jekyll Generated) -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <meta name="description" content="Portfolio of Bendegúz Szczuka. Design. Code. Experience.">
+</head>
+
+<body>
+
+    <!-- SVG Clip Paths for Responsive Shapes -->
+    <svg width="0" height="0" style="position: absolute; pointer-events: none;">
+        <defs>
+            <clipPath id="triangle-clip" clipPathUnits="objectBoundingBox">
+                <path d="M150 260 L60 260 Q30 260 40 230 L130 60 Q150 25 170 60 L260 230 Q270 260 240 260 Z"
+                    transform="scale(0.00333333)" />
+            </clipPath>
+            <clipPath id="cross-clip" clipPathUnits="objectBoundingBox">
+                <path
+                    d="M160,0 C200,0 200,120 320,160 C200,200 200,320 160,320 C120,320 120,200 0,160 C120,120 120,0 160,0 Z"
+                    transform="scale(0.003125)" />
+            </clipPath>
+        </defs>
+    </svg>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top py-4">
+        <div class="container-fluid px-4 px-md-5">
+            <a class="navbar-brand text-white fw-bold text-uppercase" href="#">Szczuka</a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-4 align-items-center">
+                    <li class="nav-item"><a class="nav-link text-white" href="#about" data-i18n="nav_about">About</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#work" data-i18n="nav_work">Work</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contact"
+                            data-i18n="nav_contact">Contact</a></li>
+                    <li class="nav-item ms-md-2">
+                        <a href="#" id="lang-toggle-btn"
+                            class="nav-link text-white border border-white rounded-pill px-3 py-1 d-inline-block"
+                            style="font-size: 0.8rem; transition: all 0.3s ease;">
+                            <span class="fw-bold">EN</span> / <span class="opacity-50">HU</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Global Pinwheel (Visible Across All Sections) -->
+    <div class="shape-wrapper shape-pinwheel">
+        <div class="pinwheel">
+            <div class="pinwheel-blade blade-1"></div>
+            <div class="pinwheel-blade blade-2"></div>
+            <div class="pinwheel-blade blade-3"></div>
+            <div class="pinwheel-blade blade-4"></div>
+            <div class="pinwheel-blade blade-5"></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center justify-content-center min-vh-100 position-relative">
+
+        <!-- Abstract Background Shapes -->
+        <div class="hero-shapes position-absolute top-0 start-0 w-100 h-100 pointer-events-none">
+
+            <!-- Hot Pink Organic Blob (Top Center) -->
+            <div class="shape-wrapper shape-blob-pink">
+                <div class="abstract-shape blob-pink"></div>
+            </div>
+
+            <!-- Blue Toggle Switch (Bottom Left) -->
+            <div class="shape-wrapper shape-toggle">
+                <div class="abstract-shape toggle-switch">
+                    <div class="toggle-on-bg"></div>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container text-center z-2">
+            <div class="glass-pill mb-4 reveal-simple" data-i18n="hero_pill">Portfolio 2026</div>
+            <h1 class="display-huge fw-bold text-uppercase lh-1" style="overflow-wrap: break-word;">
+                <span class="text-mask">
+                    <span>Bendegúz</span>
+                </span>
+                <span class="text-mask">
+                    <span class="text-gradient">Szczuka</span>
+                </span>
+            </h1>
+            <p class="lead text-white-50 mt-4 mx-auto reveal-simple" style="max-width: 60ch;" data-i18n="hero_desc">
+                Dedicated and communicative developer with a passion for continuous learning.
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding position-relative">
+
+        <!-- Abstract Shapes for About Section -->
+        <div class="section-shapes">
+
+            <!-- Triangle Shape (Bottom Left) -->
+            <div class="shape-wrapper shape-triangle">
+                <div class="abstract-shape triangle-blue"></div>
+            </div>
+        </div>
+
+        <div class="container position-relative z-2">
+            <div class="row align-items-start">
+                <div class="col-lg-6 mb-5 mb-lg-0 reveal-on-scroll">
+                    <h2 class="display-3 mb-4" data-i18n="about_title">About Me</h2>
+                    <p class="text-white-50 fs-5 mb-4" data-i18n="about_p1">
+                        I am currently pursuing my <strong>Computer Science Engineering</strong> degree at <strong>Obuda
+                            University</strong> (2022 – Present). I’m enthusiastic about expanding my knowledge and
+                        expertise in the field.
+                    </p>
+                    <p class="text-white-50 mb-4" data-i18n="about_p2">
+                        Beyond coding, I'm a communicative team player who values continuous learning. I strengthen my
+                        skills daily alongside my university studies.
+                    </p>
+
+                    <div class="mt-5">
+                        <h4 class="text-white mb-3" data-i18n="about_lang_title">Languages</h4>
+                        <ul class="list-inline text-white-50">
+                            <li class="list-inline-item me-4" data-i18n="about_lang_hu"></li>
+                            <li class="list-inline-item" data-i18n="about_lang_en"></li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-4">
+                        <h4 class="text-white mb-3" data-i18n="about_hobbies_title">Hobbies</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge rounded-pill fw-normal px-3 py-2 hobby-tag" data-i18n="about_hobby_bike">
+                                Mountain Biking</span>
+                            <span class="badge rounded-pill fw-normal px-3 py-2 hobby-tag"
+                                data-i18n="about_hobby_music">
+                                Guitar & Piano</span>
+                            <span class="badge rounded-pill fw-normal px-3 py-2 hobby-tag"
+                                data-i18n="about_hobby_acting">
+                                Acting & Directing</span>
+                            <span class="badge rounded-pill fw-normal px-3 py-2 hobby-tag"
+                                data-i18n="about_hobby_photo">
+                                Photography</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 offset-lg-1 reveal-on-scroll delay-200">
+                    <div class="glass-pill" data-i18n="about_strengths_pill">Strengths</div>
+                    <ul class="list-unstyled mt-3 text-white-50">
+                        <li class="border-bottom border-secondary py-3 d-flex justify-content-between">
+                            <span data-i18n="strength_problem_solving">Problem-solving</span> <span><i
+                                    class="bi bi-stars"></i></span>
+                        </li>
+                        <li class="border-bottom border-secondary py-3 d-flex justify-content-between">
+                            <span data-i18n="strength_teamwork">Teamwork</span> <span><i
+                                    class="bi bi-people"></i></span>
+                        </li>
+                        <li class="border-bottom border-secondary py-3 d-flex justify-content-between">
+                            <span data-i18n="strength_communication">Communication</span> <span><i
+                                    class="bi bi-chat-dots"></i></span>
+                        </li>
+                        <li class="border-bottom border-secondary py-3 d-flex justify-content-between"><span
+                                data-i18n="strength_time_mgmt">Time
+                                Management</span> <span><i class="bi bi-hourglass-split"></i></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Projects Section -->
+    <section id="work" class="section-padding position-relative">
+
+        <!-- Abstract Shapes for Work Section -->
+        <div class="section-shapes">
+            <!-- Cross/Flower Shape (Bottom Right) -->
+            <div class="shape-wrapper shape-cross">
+                <div class="abstract-shape cross-gradient"></div>
+            </div>
+        </div>
+
+        <div class="container position-relative z-2">
+            <div class="row mb-4">
+                <div class="col-12 text-center reveal-on-scroll">
+                    <h2 class="display-2" data-i18n="work_title">Experience & Projects</h2>
+                </div>
+            </div>
+            <div class="row g-5 align-items-start work-projects-layout">
+                <div class="col-lg-5">
+                    <div class="project-menu-card reveal-on-scroll">
+                        <div class="text-uppercase small text-white-50" data-i18n="work_menu_label">Project Index</div>
+                        <h3 class="work-subtitle" data-i18n="work_menu_title">All projects</h3>
+                        <p class="text-white-50" data-i18n="work_menu_desc">
+                            A clean index for deep dives. Select a project to jump to its full details.
+                        </p>
+                        <!-- Mobile Project Selector (Pills matching Hobby Tags) -->
+                        <div class="d-lg-none mb-4 mobile-project-nav-wrapper">
+                            <nav class="mobile-project-nav" id="mobileProjectNav">
+                                <button class="badge rounded-pill fw-normal px-3 py-2 hobby-tag mobile-project-pill is-active is-featured" data-project="project-1" data-i18n="work_project_1_title">Damocles Kft.</button>
+                                <button class="badge rounded-pill fw-normal px-3 py-2 hobby-tag mobile-project-pill is-featured" data-project="project-2" data-i18n="work_project_2_title">Bosch Team</button>
+                                <button class="badge rounded-pill fw-normal px-3 py-2 hobby-tag mobile-project-pill is-featured" data-project="project-6" data-i18n="work_project_6_title">ESP32 Tuner</button>
+                                <button class="badge rounded-pill fw-normal px-3 py-2 hobby-tag mobile-project-pill" data-project="project-3" data-i18n="work_project_3_title">CodeLingo</button>
+                                <button class="badge rounded-pill fw-normal px-3 py-2 hobby-tag mobile-project-pill" data-project="project-4" data-i18n="work_project_4_title">Nullpont Theater</button>
+                                <button class="badge rounded-pill fw-normal px-3 py-2 hobby-tag mobile-project-pill" data-project="project-5" data-i18n="work_project_5_title">Valasztas 2026</button>
+                                <button class="badge rounded-pill fw-normal px-3 py-2 hobby-tag mobile-project-pill" data-project="project-7" data-i18n="work_project_7_title">Nullpont Booking</button>
+                                <button class="badge rounded-pill fw-normal px-3 py-2 hobby-tag mobile-project-pill" data-project="project-8" data-i18n="work_project_8_title">BikeStore</button>
+                                <button class="badge rounded-pill fw-normal px-3 py-2 hobby-tag mobile-project-pill" data-project="project-9" data-i18n="work_project_9_title">CarRental</button>
+                                <button class="badge rounded-pill fw-normal px-3 py-2 hobby-tag mobile-project-pill" data-project="project-10" data-i18n="work_project_10_title">Arduino Maze</button>
+                            </nav>
+                        </div>
+
+                        <nav class="project-menu d-none d-lg-grid" data-project-menu>
+                            <a class="project-menu-item is-active is-featured" href="#project-1" data-project="project-1">
+                                <span class="project-menu-kicker" data-i18n="work_project_1_kicker">Company</span>
+                                <span class="project-menu-title" data-i18n="work_project_1_title">Damocles Kft.</span>
+                                <span class="project-menu-meta" data-i18n="work_project_1_meta">2024 - Present · IT Ops
+                                    & Automation</span>
+                            </a>
+                            <a class="project-menu-item is-featured" href="#project-2" data-project="project-2">
+                                <span class="project-menu-kicker" data-i18n="work_project_2_kicker">Team</span>
+                                <span class="project-menu-title" data-i18n="work_project_2_title">Bosch Robot-Building
+                                    Team</span>
+                                <span class="project-menu-meta" data-i18n="work_project_2_meta">2023 - 2026 ·
+                                    Robotics</span>
+                            </a>
+                            <a class="project-menu-item is-featured" href="#project-6" data-project="project-6">
+                                <span class="project-menu-kicker" data-i18n="work_project_6_kicker">Embedded</span>
+                                <span class="project-menu-title"
+                                    data-i18n="work_project_6_title">ESP32VariableTuner</span>
+                                <span class="project-menu-meta" data-i18n="work_project_6_meta">2025 - 2026 ·
+                                    Firmware</span>
+                            </a>
+                            <a class="project-menu-item" href="#project-3" data-project="project-3">
+                                <span class="project-menu-kicker" data-i18n="work_project_3_kicker">Product</span>
+                                <span class="project-menu-title" data-i18n="work_project_3_title">CodeLingo</span>
+                                <span class="project-menu-meta" data-i18n="work_project_3_meta">2022 - 2024 · Learning
+                                    Platform</span>
+                            </a>
+                            <a class="project-menu-item" href="#project-4" data-project="project-4">
+                                <span class="project-menu-kicker" data-i18n="work_project_4_kicker">Workshop</span>
+                                <span class="project-menu-title" data-i18n="work_project_4_title">Nullpont Theater
+                                    Workshop</span>
+                                <span class="project-menu-meta" data-i18n="work_project_4_meta">2022 - 2023 ·
+                                    Creative</span>
+                            </a>
+                            <a class="project-menu-item" href="#project-5" data-project="project-5">
+                                <span class="project-menu-kicker" data-i18n="work_project_5_kicker">Data</span>
+                                <span class="project-menu-title" data-i18n="work_project_5_title">Valasztas 2026</span>
+                                <span class="project-menu-meta" data-i18n="work_project_5_meta">2024 - 2026 ·
+                                    Simulation</span>
+                            </a>
+                            <a class="project-menu-item" href="#project-7" data-project="project-7">
+                                <span class="project-menu-kicker" data-i18n="work_project_7_kicker">Product</span>
+                                <span class="project-menu-title" data-i18n="work_project_7_title">Nullpont
+                                    Booking</span>
+                                <span class="project-menu-meta" data-i18n="work_project_7_meta">2022 - 2023 · Event
+                                    System</span>
+                            </a>
+                            <a class="project-menu-item" href="#project-8" data-project="project-8">
+                                <span class="project-menu-kicker" data-i18n="work_project_8_kicker">Product</span>
+                                <span class="project-menu-title" data-i18n="work_project_8_title">BikeStore</span>
+                                <span class="project-menu-meta" data-i18n="work_project_8_meta">2023 - 2024 ·
+                                    Webshop</span>
+                            </a>
+                            <a class="project-menu-item" href="#project-9" data-project="project-9">
+                                <span class="project-menu-kicker" data-i18n="work_project_9_kicker">System</span>
+                                <span class="project-menu-title" data-i18n="work_project_9_title">CarRental</span>
+                                <span class="project-menu-meta" data-i18n="work_project_9_meta">2023 - 2024 · Rental
+                                    Platform</span>
+                            </a>
+                            <a class="project-menu-item" href="#project-10" data-project="project-10">
+                                <span class="project-menu-kicker" data-i18n="work_project_10_kicker">Embedded</span>
+                                <span class="project-menu-title" data-i18n="work_project_10_title">Arduino Maze
+                                    Solver</span>
+                                <span class="project-menu-meta" data-i18n="work_project_10_meta">2023 - 2024 ·
+                                    Robotics</span>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="project-detail-stack" data-project-panels>
+                        <article id="project-1" class="project-detail-card is-active is-featured"
+                            data-project="project-1">
+                            <div class="project-detail-header">
+                                <div class="project-summary-kicker" data-i18n="work_project_1_kicker">Company</div>
+                                <h4 class="project-summary-title" data-i18n="work_project_1_title">Damocles Kft.</h4>
+                                <div class="project-summary-meta text-white-50 small" data-i18n="work_project_1_meta">
+                                    2024 - Present · IT Ops & Automation</div>
+                            </div>
+                            <div class="project-detail-body">
+                                <div class="project-detail-content">
+                                    <p class="text-white-50" data-i18n="work_project_1_desc">
+                                        IT operations with security hardening and identity management (Azure AD/Entra),
+                                        plus workflow automation.
+                                    </p>
+                                    <ul class="text-white-50 small ps-3">
+                                        <li data-i18n="work_project_1_point_1">Endpoint lifecycle, patching, and asset
+                                            tracking.</li>
+                                        <li data-i18n="work_project_1_point_2">Automation with PowerShell and n8n
+                                            webhook/API flows.</li>
+                                        <li data-i18n="work_project_1_point_3">Runbooks, knowledge base, and stakeholder
+                                            comms.</li>
+                                        <li data-i18n="work_project_1_point_4">Website development</li>
+                                        <li data-i18n="work_project_1_point_5">Client-side web development and fixes</li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://damocles.hu" target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_1_link_1">Company site</a>
+                                        <a href="https://www.linkedin.com/company/damocles-kft/" target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_1_link_2">LinkedIn</a>
+                                    </div>
+                                    <div class="project-tech-stack">
+                                        <div class="text-uppercase small text-white-50 mb-3" data-i18n="work_tech_stack_label">Tech Stack</div>
+                                        <div class="d-flex flex-wrap gap-y-4 gap-x-3" data-i18n="work_project_1_tech">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id="project-2" class="project-detail-card is-featured"
+                            data-project="project-2">
+                            <div class="project-detail-header">
+                                <div class="project-summary-kicker" data-i18n="work_project_2_kicker">Team</div>
+                                <h4 class="project-summary-title" data-i18n="work_project_2_title">Bosch Robot-Building
+                                    Team</h4>
+                                <div class="project-summary-meta text-white-50 small" data-i18n="work_project_2_meta">
+                                    2023 - 2026 · Robotics</div>
+                            </div>
+                            <div class="project-detail-body">
+                                <div class="project-detail-content">
+                                    <p class="text-white-50" data-i18n="work_project_2_desc">
+                                        ESP32 maze robot with real-time web diagnostics, PID tuning, and sensor fusion.
+                                    </p>
+                                    <ul class="text-white-50 small ps-3">
+                                        <li data-i18n="work_project_2_point_1">2025: 1st place (Sprint & Overall) with
+                                            ESP32 web interface.</li>
+                                        <li data-i18n="work_project_2_point_2">2024: 3rd place + Mechanical Design award
+                                            with Arduino upgrade.</li>
+                                        <li data-i18n="work_project_2_point_3">2023: 3rd place in the maze-solving
+                                            competition.</li>
+                                        <li data-i18n="work_project_2_point_4"></li>
+                                        <li data-i18n="work_project_2_point_5"></li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://www.teamjerry.hu" target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_2_link_1">Team Jerry</a>
+                                        <a href="https://github.com/szczukabendeguz/Jerry3_ESP32_MazeSolvingRobot"
+                                            target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_2_link_2">Jerry3 repo</a>
+                                        <a href="https://github.com/szczukabendeguz/ArduinoMazeSolvingRobot"
+                                            target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_2_link_3">Arduino repo</a>
+                                        <a href="https://kando-szakkoli.uni-obuda.hu/mobilrobotok-az-utvesztoben-avagy-ujra-verseny-volt-a-labirintus-falai-kozott-megrendezesre-kerult-a-ii-labirintusvereny-elso-futama/"
+                                            target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_2_link_4">II. Report</a>
+                                        <a href="https://kando-szakkoli.uni-obuda.hu/iii-labirintusverseny-beszamolo/"
+                                            target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_2_link_5">III. Report</a>
+                                        <a href="https://kando-szakkoli.uni-obuda.hu/iii-labirintusverseny-visszavago-beszamolo/"
+                                            target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_2_link_6">III. Rematch</a>
+                                    </div>
+                                    <div class="project-tech-stack">
+                                        <div class="text-uppercase small text-white-50 mb-3" data-i18n="work_tech_stack_label">Tech Stack</div>
+                                        <div class="d-flex flex-wrap gap-y-4 gap-x-3" data-i18n="work_project_2_tech">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id="project-6" class="project-detail-card is-featured"
+                            data-project="project-6">
+                            <div class="project-detail-header">
+                                <div class="project-summary-kicker" data-i18n="work_project_6_kicker">Embedded</div>
+                                <h4 class="project-summary-title" data-i18n="work_project_6_title">ESP32VariableTuner
+                                </h4>
+                                <div class="project-summary-meta text-white-50 small" data-i18n="work_project_6_meta">
+                                    2025 - 2026 · Firmware</div>
+                            </div>
+                            <div class="project-detail-body">
+                                <div class="project-detail-content">
+                                    <p class="text-white-50" data-i18n="work_project_6_desc">TDK project for tuning
+                                        control systems with ESP32 hardware.</p>
+                                    <ul class="text-white-50 small ps-3">
+                                        <li data-i18n="work_project_6_point_1">PID tuning tooling with sensor feedback.</li>
+                                        <li data-i18n="work_project_6_point_2">Hardware-software integration and testing rig.</li>
+                                        <li data-i18n="work_project_6_point_3">3rd place at the 2026 university TDK.</li>
+                                        <li data-i18n="work_project_6_point_4">Awarded 3rd place at the 2026 University TDK.</li>
+                                        <li data-i18n="work_project_6_point_5"></li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://github.com/szczukabendeguz/ESP32VariableTuner-public"
+                                            target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_6_link_1">Repository</a>
+                                        <a href="https://registry.platformio.org/libraries/szczukabendeguz/ESP32VariableTuner"
+                                            target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_6_link_2">PlatformIO library</a>
+                                        <a href="https://uni-obuda.hu/wp-content/uploads/2026/05/TDK_2026_tavasz_dijazottak.pdf"
+                                            target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_6_link_3">TDK Results (PDF)</a>
+                                    </div>
+                                    <div class="project-tech-stack">
+                                        <div class="text-uppercase small text-white-50 mb-3" data-i18n="work_tech_stack_label">Tech Stack</div>
+                                        <div class="d-flex flex-wrap gap-y-4 gap-x-3" data-i18n="work_project_6_tech">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id="project-3" class="project-detail-card"
+                            data-project="project-3">
+                            <div class="project-detail-header">
+                                <div class="project-summary-kicker" data-i18n="work_project_3_kicker">Product</div>
+                                <h4 class="project-summary-title" data-i18n="work_project_3_title">CodeLingo</h4>
+                                <div class="project-summary-meta text-white-50 small" data-i18n="work_project_3_meta">
+                                    2022 - 2024 · Learning Platform</div>
+                            </div>
+                            <div class="project-detail-body">
+                                <div class="project-detail-content">
+                                    <p class="text-white-50" data-i18n="work_project_3_desc">
+                                        Full-stack language learning platform with admin tooling and progress tracking.
+                                    </p>
+                                    <ul class="text-white-50 small ps-3">
+                                        <li data-i18n="work_project_3_point_1">ASP.NET 8 backend with Angular frontend
+                                            and admin panel.</li>
+                                        <li data-i18n="work_project_3_point_2">Curriculum builder, quizzes, and progress
+                                            analytics.</li>
+                                        <li data-i18n="work_project_3_point_3">CI/CD pipeline and deployment strategy.
+                                        </li>
+                                        <li data-i18n="work_project_3_point_4"></li>
+                                        <li data-i18n="work_project_3_point_5"></li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://codelingo.hu" target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_3_link_1">CodeLingo live</a>
+                                    </div>
+                                    <div class="project-tech-stack">
+                                        <div class="text-uppercase small text-white-50 mb-3" data-i18n="work_tech_stack_label">Tech Stack</div>
+                                        <div class="d-flex flex-wrap gap-y-4 gap-x-3" data-i18n="work_project_3_tech">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id="project-4" class="project-detail-card"
+                            data-project="project-4">
+                            <div class="project-detail-header">
+                                <div class="project-summary-kicker" data-i18n="work_project_4_kicker">Workshop</div>
+                                <h4 class="project-summary-title" data-i18n="work_project_4_title">Nullpont Theater
+                                    Workshop</h4>
+                                <div class="project-summary-meta text-white-50 small" data-i18n="work_project_4_meta">
+                                    2022 - 2023 · Creative</div>
+                            </div>
+                            <div class="project-detail-body">
+                                <div class="project-detail-content">
+                                    <p class="text-white-50" data-i18n="work_project_4_desc">
+                                        Creative production work: writing, directing, and performing, plus building the
+                                        web presence.
+                                    </p>
+                                    <ul class="text-white-50 small ps-3">
+                                        <li data-i18n="work_project_4_point_1">Led the team through production planning
+                                            and delivery.</li>
+                                        <li data-i18n="work_project_4_point_2">Handled web presence and booking flow
+                                            foundations.</li>
+                                        <li data-i18n="work_project_4_point_3">Audience communication and promotion
+                                            assets.</li>
+                                        <li data-i18n="work_project_4_point_4"></li>
+                                        <li data-i18n="work_project_4_point_5"></li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://www.facebook.com/nullpontmuhely/" target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_4_link_1">Facebook</a>
+                                        <a href="https://szczukabendeguz.github.io/Budapesten_webapp/" target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_4_link_2">Budapesten site</a>
+                                        <a href="https://github.com/szczukabendeguz/Budapesten_webapp" target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_4_link_3">Budapesten repo</a>
+                                    </div>
+                                    <div class="project-tech-stack">
+                                        <div class="text-uppercase small text-white-50 mb-3" data-i18n="work_tech_stack_label">Tech Stack</div>
+                                        <div class="d-flex flex-wrap gap-y-4 gap-x-3" data-i18n="work_project_4_tech">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id="project-5" class="project-detail-card"
+                            data-project="project-5">
+                            <div class="project-detail-header">
+                                <div class="project-summary-kicker" data-i18n="work_project_5_kicker">Data</div>
+                                <h4 class="project-summary-title" data-i18n="work_project_5_title">Valasztas 2026</h4>
+                                <div class="project-summary-meta text-white-50 small" data-i18n="work_project_5_meta">
+                                    2024 - 2026 · Simulation</div>
+                            </div>
+                            <div class="project-detail-body">
+                                <div class="project-detail-content">
+                                    <p class="text-white-50" data-i18n="work_project_5_desc">Election simulator with
+                                        D'Hondt logic and scenario exports.</p>
+                                    <ul class="text-white-50 small ps-3">
+                                        <li data-i18n="work_project_5_point_1">Seat allocation engine with configurable
+                                            inputs.</li>
+                                        <li data-i18n="work_project_5_point_2">Scenario comparison and exportable
+                                            reports.</li>
+                                        <li data-i18n="work_project_5_point_3">UX focused on clarity and data trust.
+                                        </li>
+                                        <li data-i18n="work_project_5_point_4"></li>
+                                        <li data-i18n="work_project_5_point_5"></li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://szczukabendeguz.github.io/Valasztas2026/" target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_5_link_1">Live demo</a>
+                                    </div>
+                                    <div class="project-tech-stack">
+                                        <div class="text-uppercase small text-white-50 mb-3" data-i18n="work_tech_stack_label">Tech Stack</div>
+                                        <div class="d-flex flex-wrap gap-y-4 gap-x-3" data-i18n="work_project_5_tech">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+
+
+                        <article id="project-7" class="project-detail-card"
+                            data-project="project-7">
+                            <div class="project-detail-header">
+                                <div class="project-summary-kicker" data-i18n="work_project_7_kicker">Product</div>
+                                <h4 class="project-summary-title" data-i18n="work_project_7_title">Nullpont Booking</h4>
+                                <div class="project-summary-meta text-white-50 small" data-i18n="work_project_7_meta">
+                                    2022 - 2023 · Event System</div>
+                            </div>
+                            <div class="project-detail-body">
+                                <div class="project-detail-content">
+                                    <p class="text-white-50" data-i18n="work_project_7_desc">Ticket booking system with
+                                        capacity handling and email automation.</p>
+                                    <ul class="text-white-50 small ps-3">
+                                        <li data-i18n="work_project_7_point_1">Next.js + TypeScript booking flow.</li>
+                                        <li data-i18n="work_project_7_point_2">Capacity checks and automated
+                                            notifications.</li>
+                                        <li data-i18n="work_project_7_point_3">Deployment tied to the theater site.</li>
+                                        <li data-i18n="work_project_7_point_4"></li>
+                                        <li data-i18n="work_project_7_point_5"></li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://szczukabendeguz.github.io/booking_webapp_nullpontmuhely/" target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_7_link_1">Demo site</a>
+                                        <a href="https://github.com/szczukabendeguz/booking_webapp_nullpontmuhely"
+                                            target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_7_link_2">Repository</a>
+                                    </div>
+                                    <div class="project-tech-stack">
+                                        <div class="text-uppercase small text-white-50 mb-3" data-i18n="work_tech_stack_label">Tech Stack</div>
+                                        <div class="d-flex flex-wrap gap-y-4 gap-x-3" data-i18n="work_project_7_tech">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id="project-8" class="project-detail-card"
+                            data-project="project-8">
+                            <div class="project-detail-header">
+                                <div class="project-summary-kicker" data-i18n="work_project_8_kicker">Product</div>
+                                <h4 class="project-summary-title" data-i18n="work_project_8_title">BikeStore</h4>
+                                <div class="project-summary-meta text-white-50 small" data-i18n="work_project_8_meta">
+                                    2023 - 2024 · Webshop</div>
+                            </div>
+                            <div class="project-detail-body">
+                                <div class="project-detail-content">
+                                    <p class="text-white-50" data-i18n="work_project_8_desc">Full-stack ecommerce build
+                                        with authentication and CRUD flows.</p>
+                                    <ul class="text-white-50 small ps-3">
+                                        <li data-i18n="work_project_8_point_1">Angular frontend with .NET API backend.
+                                        </li>
+                                        <li data-i18n="work_project_8_point_2">Identity + JWT auth and SQL Server
+                                            storage.</li>
+                                        <li data-i18n="work_project_8_point_3">AutoMapper and clean data contracts.</li>
+                                        <li data-i18n="work_project_8_point_4"></li>
+                                        <li data-i18n="work_project_8_point_5"></li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://github.com/szczukabendeguz/Fullstack_BikeStore" target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_8_link_1">Repository</a>
+                                        <a href="https://szczukabendeguz.github.io/Fullstack_BikeStore/" target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_8_link_4">Live Demo</a>
+                                    </div>
+                                    <div class="project-tech-stack">
+                                        <div class="text-uppercase small text-white-50 mb-3" data-i18n="work_tech_stack_label">Tech Stack</div>
+                                        <div class="d-flex flex-wrap gap-y-4 gap-x-3" data-i18n="work_project_8_tech">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id="project-9" class="project-detail-card"
+                            data-project="project-9">
+                            <div class="project-detail-header">
+                                <div class="project-summary-kicker" data-i18n="work_project_9_kicker">System</div>
+                                <h4 class="project-summary-title" data-i18n="work_project_9_title">CarRental</h4>
+                                <div class="project-summary-meta text-white-50 small" data-i18n="work_project_9_meta">
+                                    2023 - 2024 · Rental Platform</div>
+                            </div>
+                            <div class="project-detail-body">
+                                <div class="project-detail-content">
+                                    <p class="text-white-50" data-i18n="work_project_9_desc">Rental management system
+                                        with clean architecture and multi-client setup.</p>
+                                    <ul class="text-white-50 small ps-3">
+                                        <li data-i18n="work_project_9_point_1">WPF, Web, and Console clients with shared
+                                            core.</li>
+                                        <li data-i18n="work_project_9_point_2">SignalR updates and layered domain model.
+                                        </li>
+                                        <li data-i18n="work_project_9_point_3">Focus on maintainability and testing.
+                                        </li>
+                                        <li data-i18n="work_project_9_point_4"></li>
+                                        <li data-i18n="work_project_9_point_5"></li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://github.com/szczukabendeguz/ASP.NET_CarRental" target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_9_link_1">Repository</a>
+                                    </div>
+                                    <div class="project-tech-stack">
+                                        <div class="text-uppercase small text-white-50 mb-3" data-i18n="work_tech_stack_label">Tech Stack</div>
+                                        <div class="d-flex flex-wrap gap-y-4 gap-x-3" data-i18n="work_project_9_tech">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id="project-10" class="project-detail-card"
+                            data-project="project-10">
+                            <div class="project-detail-header">
+                                <div class="project-summary-kicker" data-i18n="work_project_10_kicker">Embedded</div>
+                                <h4 class="project-summary-title" data-i18n="work_project_10_title">Arduino Maze Solver
+                                </h4>
+                                <div class="project-summary-meta text-white-50 small" data-i18n="work_project_10_meta">
+                                    2023 - 2024 · Robotics</div>
+                            </div>
+                            <div class="project-detail-body">
+                                <div class="project-detail-content">
+                                    <p class="text-white-50" data-i18n="work_project_10_desc">Maze-solving robot
+                                        firmware with sensor fusion and motion control.</p>
+                                    <ul class="text-white-50 small ps-3">
+                                        <li data-i18n="work_project_10_point_1">Arduino-based control loop and PID
+                                            tuning.</li>
+                                        <li data-i18n="work_project_10_point_2">Sensor calibration and telemetry
+                                            logging.</li>
+                                        <li data-i18n="work_project_10_point_3">Built for competition iteration cycles.
+                                        </li>
+                                        <li data-i18n="work_project_10_point_4"></li>
+                                        <li data-i18n="work_project_10_point_5"></li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://github.com/szczukabendeguz/ArduinoMazeSolvingRobot"
+                                            target="_blank"
+                                            class="text-uppercase text-white-50 hover-white magnetic-btn project-link"
+                                            data-i18n="work_project_10_link_1">Repository</a>
+                                    </div>
+                                    <div class="project-tech-stack">
+                                        <div class="text-uppercase small text-white-50 mb-3" data-i18n="work_tech_stack_label">Tech Stack</div>
+                                        <div class="d-flex flex-wrap gap-y-4 gap-x-3" data-i18n="work_project_10_tech">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-5 reveal-on-scroll">
+                <div class="col-12 text-center">
+                    <div class="project-tech-stack border-top-0 pt-0">
+                        <div class="text-uppercase small text-white-50 mb-4" data-i18n="work_tech_stack_label">Tech Stack</div>
+                        <div class="d-flex flex-wrap justify-content-center gap-y-4 gap-x-3" id="global-tech-stack">
+                            <!-- Tech tags will be injected here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding text-center position-relative overflow-hidden">
+        <div class="glow-orb"
+            style="top: 50%; left: 50%; width: 60vw; max-width: 600px; height: 60vw; max-height: 600px; background: #3333FF; transform: translate(-50%, -50%); opacity: 0.2;">
+        </div>
+
+        <div class="container position-relative z-2">
+            <h2 class="display-1 mb-5" data-i18n="contact_title">Get In Touch</h2>
+            <a href="mailto:bendeguz@szczuka.hu"
+                class="display-4 text-decoration-none text-white border-bottom border-2 border-white pb-2 hover-neon"
+                style="font-size: clamp(1.5rem, 5vw, 3rem);">bendeguz@szczuka.hu</a>
+
+            <div class="mt-5 d-flex justify-content-center gap-4 flex-wrap">
+                <a href="https://linkedin.com/in/szczuka-bende/" target="_blank"
+                    class="text-white-50 text-uppercase hover-white magnetic-btn"
+                    data-i18n="contact_linkedin">LinkedIn</a>
+                <a href="https://github.com/szczukabendeguz/" target="_blank"
+                    class="text-white-50 text-uppercase hover-white magnetic-btn" data-i18n="contact_github">GitHub</a>
+                <a href="https://www.teamjerry.hu" target="_blank"
+                    class="text-white-50 text-uppercase hover-white magnetic-btn" data-i18n="contact_team">Team
+                    Jerry</a>
+            </div>
+
+            <footer class="mt-5 pt-5 text-white-50 small" data-i18n="footer_rights">
+                &copy; 2026 Bendegúz Szczuka. All rights reserved.
+            </footer>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Translation System -->
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/language-system.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
