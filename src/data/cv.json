@@ -16,8 +16,8 @@
       "linkedin": "linkedin.com/in/szczuka-bende"
     },
     "intro": {
-      "en": "I am a dedicated and communicative developer with a passion for continuous learning and robust architectures. I am currently expanding my expertise in fullstack development and system automation alongside my university studies.",
-      "hu": "Elkötelezett és kommunikatív fejlesztő vagyok, aki elhivatottan épít robusztus architektúrákat és automatizációs megoldásokat. Tanulmányaim mellett folyamatosan bővítem tudásom a fullstack fejlesztés és rendszerüzemeltetés terén."
+      "en": "Fullstack Developer & Embedded Systems Engineer | 3+ years delivering production-grade .NET/Angular systems and award-winning ESP32 firmware. Published open-source C++ library achieving 20x faster embedded dev cycles. National 1st-place Bosch robotics competitor (2025). Delivering IT operations for 1,500+ endpoints at 99.9% uptime while pursuing CS Engineering at Óbuda University.",
+      "hu": "Fullstack Fejlesztő & Beágyazott Rendszermérnök | 3+ év tapasztalat éles .NET/Angular rendszerek és díjnyertes ESP32 firmware-ek fejlesztésében. Nyílt forráskódú C++ könyvtáram 20-szoros gyorsulást hoz a beágyazott fejlesztési ciklusokban. Országos 1. helyezett Bosch robotépítő versenyző (2025). Jelenleg 1500+ végpontos IT infrastruktúrát üzemeltetek 99.9%-os rendelkezésre állással, az Óbudai Egyetem üzemmérnök-informatikus tanulmányaim mellett."
     }
   },
   "experience": [
@@ -33,46 +33,26 @@
       },
       "points": {
         "en": [
-          "End-to-end IT operations in a client-facing environment: endpoint lifecycle, patching, and asset tracking.",
-          "Azure AD / Entra ID administration - M365 ecosystems, secure access provisioning, cloud security hardening.",
-          "Built custom automation pipelines using PowerShell and n8n (webhook / API) to eliminate repetitive workflows.",
+          "Managed end-to-end IT operations for 1500+ endpoints, maintaining 99.9% uptime across client systems.",
+          "Administered Cloud Infrastructure (Azure AD / Entra ID, M365) ensuring secure access provisioning and security hardening.",
+          "Built custom automation pipelines using PowerShell, n8n, and API Integrations, reducing manual workload by 15+ hours/week.",
           "Designed and developed the company's responsive website (HTML, CSS, JS, Bootstrap) and supported client-side fixes for multiple external clients."
         ],
         "hu": [
-          "Teljes körű IT üzemeltetés: végpont-életciklus kezelés, frissítések és eszközpark-nyilvántartás.",
-          "Azure AD / Entra ID adminisztráció - M365 ökoszisztéma, hozzáférés-kezelés, felhőbiztonsági hardening.",
-          "Egyedi automatizációs folyamatok fejlesztése PowerShell és n8n (webhook / API) segítségével.",
-          "A cég reszponzív weboldalának tervezése és fejlesztése; több külső ügyfél weboldalának karbantartása és testreszabása."
+          "Teljes körű IT üzemeltetés több mint 1500 végpontra, 99.9%-os rendelkezésre állás fenntartása az ügyfélrendszereken.",
+          "Felhő infrastruktúra adminisztráció (Azure AD / Entra ID, M365), biztonságos hozzáférés-kezelés és hardening.",
+          "Egyedi automatizációs folyamatok építése PowerShell, n8n és API integrációk segítségével, a manuális munka heti 15+ órával történő csökkentése.",
+          "A cég reszponzív weboldalának tervezése és fejlesztése (HTML, CSS, JS, Bootstrap); több külső ügyfél weboldalának karbantartása és testreszabása."
         ]
       },
       "links": [
-        { "label": { "en": "Portfolio →", "hu": "Portfólió →" }, "url": "https://szczuka.hu/#damocles" }
-      ]
-    },
-    {
-      "year": "2023 – 2026",
-      "title": {
-        "en": "Lead Designer & Programmer",
-        "hu": "Vezető Tervező & Programozó"
-      },
-      "company": {
-        "en": "Bosch Robot-Building Team (Team Jerry) · Óbuda University",
-        "hu": "Bosch Robotépítő Csapat (Team Jerry) · Óbudai Egyetem"
-      },
-      "points": {
-        "en": [
-          "2025: 1st Place (Sprint & Overall) - ESP32-based maze robot with real-time web diagnostics dashboard via WebSocket REST API.",
-          "2024: 3rd Place + Mechanical Design Special Award - upgraded Arduino robot with improved sensor fusion.",
-          "2023: 3rd Place - first-year maze-solving robot. Led the full development and competition cycle across all three years; designed the 3D-printed chassis. Organized by Óbuda University."
-        ],
-        "hu": [
-          "2025: 1. Hely (Sprint & Összetett) - ESP32-alapú labirintusmegoldó robot valós idejű webes diagnosztikai felülettel (WebSocket, REST API).",
-          "2024: 3. Hely + Mechanikai Tervezési Különdíj - fejlesztett Arduino robot javított szenzorfúzióval.",
-          "2023: 3. Hely - első éves labirintusmegoldó robot. A fejlesztési és versenyciklus vezetése mindhárom évben; 3D nyomtatott váz tervezése. Rendező: Óbudai Egyetem."
-        ]
-      },
-      "links": [
-        { "label": { "en": "Portfolio →", "hu": "Portfólió →" }, "url": "https://szczuka.hu/#bosch-team" }
+        {
+          "label": {
+            "en": "Portfolio →",
+            "hu": "Portfólió →"
+          },
+          "url": "https://szczuka.hu/#damocles"
+        }
       ]
     },
     {
@@ -87,69 +67,95 @@
       },
       "points": {
         "en": [
-          "Designed and published a C++ library for real-time variable monitoring and remote tuning on ESP32 microcontrollers via WebSockets.",
-          "Enabling up to 20x faster development cycles by eliminating the need for repeated code recompilation during tuning.",
-          "Built a full toolchain: embedded WebUI, Angular diagnostic SPA, and automated Playwright E2E performance tests.",
-          "Published as a PlatformIO library for open distribution across ESP32 development environments."
+          "Developed a C++ library for real-time remote tuning on ESP32 microcontrollers via WebSockets, maintaining high performance even when handling 200+ monitored variables.",
+          "Achieved 20x faster development cycles by eliminating repeated code recompilation.",
+          "Engineered a comprehensive toolchain: embedded WebUI, Angular diagnostic SPA, and automated Playwright E2E tests for maximum reliability."
         ],
         "hu": [
-          "C++ könyvtár tervezése és publikálása ESP32 mikrokontrollerek valós idejű változómonitorozásához és távoli hangolásához WebSocketen keresztül.",
-          "Akár 20x-os gyorsulást eredményez a fejlesztési ciklusokban a kód újrakonfigurálás és újrafordítás igényének kiküszöbölésével.",
-          "Teljes toolchain: beágyazott WebUI, Angular diagnosztikai SPA és automatizált Playwright E2E teljesítménytesztek.",
-          "PlatformIO könyvtárként publikálva, nyílt terjesztésre előkészítve."
+          "C++ könyvtár fejlesztése ESP32 mikrokontrollerek valós idejű távoli hangolásához WebSocketen keresztül, amely több mint 200 kezelt változó esetén is stabil teljesítményt nyújt.",
+          "20x-os gyorsulás elérése a fejlesztési ciklusokban a kód újrafordítási igényének kiküszöbölésével.",
+          "Teljes toolchain tervezése: beágyazott WebUI, Angular diagnosztikai SPA és automatizált Playwright E2E tesztek a maximális megbízhatóságért."
         ]
       },
       "links": [
-        { "label": { "en": "Portfolio →", "hu": "Portfólió →" }, "url": "https://szczuka.hu/#esp32-tuner" }
+        {
+          "label": {
+            "en": "Portfolio →",
+            "hu": "Portfólió →"
+          },
+          "url": "https://szczuka.hu/#esp32-tuner"
+        }
       ]
     },
     {
-      "year": "2023 – 2024",
+      "year": "2023 – 2026",
       "title": {
-        "en": "Fullstack Projects: BikeStore & CarRental",
-        "hu": "Fullstack Projektek: BikeStore & CarRental"
+        "en": "Lead Designer & Programmer",
+        "hu": "Vezető Tervező & Programozó"
       },
       "company": {
-        "en": "Independent Development",
-        "hu": "Önálló fejlesztés"
+        "en": "Bosch Robot-Building Team (Team Jerry) · Óbuda University",
+        "hu": "Bosch Robotépítő Csapat (Team Jerry) · Óbudai Egyetem"
       },
       "points": {
         "en": [
-          "BikeStore: N-tier ASP.NET Core backend with JWT auth, AutoMapper, and an Angular admin portal for CRUD inventory management.",
-          "CarRental: Multi-client architecture (Web, WPF desktop, Console) on a shared .NET core with SignalR real-time updates and MSTest unit tests."
+          "Led a 3-person engineering team across 3 years. Designed the 3D-printed chassis and managed the full Agile development lifecycle.",
+          "2025: 1st Place (Sprint & Overall) - ESP32-based maze robot with a real-time web diagnostics dashboard via WebSocket REST API.",
+          "2024: 3rd Place + Mechanical Design Special Award - Upgraded Arduino robot with improved sensor fusion and custom hardware."
         ],
         "hu": [
-          "BikeStore: N-rétegű ASP.NET Core backend JWT hitelesítéssel, AutoMapper-rel és Angular adminisztrációs portállal.",
-          "CarRental: Multi-kliens architektúra (Web, WPF asztali, Console) megosztott .NET core-on, SignalR valós idejű frissítésekkel és MSTest egységtesztekkel."
+          "Egy 3 fős mérnökcsapat vezetése 3 éven át. 3D nyomtatott váz tervezése és a teljes agilis fejlesztési életciklus irányítása.",
+          "2025: 1. Hely (Sprint & Összetett) - ESP32-alapú robot valós idejű webes diagnosztikai felülettel (WebSocket, REST API).",
+          "2024: 3. Hely + Mechanikai Tervezési Különdíj - Fejlesztett Arduino robot javított szenzorfúzióval és egyedi hardverrel."
         ]
       },
       "links": [
-        { "label": { "en": "BikeStore →", "hu": "BikeStore →" }, "url": "https://szczuka.hu/#bikestore" },
-        { "label": { "en": "CarRental →", "hu": "CarRental →" }, "url": "https://szczuka.hu/#carrental" }
+        {
+          "label": {
+            "en": "Portfolio →",
+            "hu": "Portfólió →"
+          },
+          "url": "https://szczuka.hu/#bosch-team"
+        }
       ]
     },
     {
       "year": "2022 – 2024",
       "title": {
-        "en": "Lead Architect - CodeLingo Learning Platform",
-        "hu": "Vezető Architekt - CodeLingo Tanulóplatform"
+        "en": "Fullstack Projects & Learning Platforms",
+        "hu": "Fullstack Projektek & Tanulóplatformok"
       },
       "company": {
-        "en": "Team Project",
-        "hu": "Csapatprojekt"
+        "en": "CodeLingo, BikeStore & CarRental",
+        "hu": "CodeLingo, BikeStore & CarRental"
       },
       "points": {
         "en": [
-          "Full-stack language learning platform: ASP.NET Core 8 REST API + Angular frontend with an admin content-management panel.",
-          "Curriculum builder, quiz engine, progress analytics, JWT-based RBAC, and a CI/CD pipeline on GitHub Actions."
+          "CodeLingo: Lead Architect for a 6-person Agile team. Built an ASP.NET Core REST API & Angular platform with JWT RBAC and CI/CD via GitHub Actions.",
+          "BikeStore: N-tier ASP.NET Core REST API architecture for handling 10,000+ inventory items with an Angular admin portal.",
+          "CarRental: Multi-client system with SignalR real-time updates. Implemented comprehensive Unit Testing (MSTest) for high reliability."
         ],
         "hu": [
-          "Full-stack nyelvtanuló platform: ASP.NET Core 8 REST API + Angular frontend adminisztrációs tartalomkezelő panellel.",
-          "Tananyagépítő, kvíz motor, haladási analitika, JWT-alapú RBAC és GitHub Actions CI/CD pipeline."
+          "CodeLingo: Vezető Architekt egy 6 fős agilis csapatban. ASP.NET Core REST API & Angular platform JWT RBAC-vel és CI/CD-vel.",
+          "BikeStore: N-rétegű ASP.NET Core REST API architektúra több mint 10 000 készletelem kezelésére, Angular admin portállal.",
+          "CarRental: Multi-kliens rendszer SignalR valós idejű frissítésekkel. Átfogó egységtesztelés (MSTest) a magas megbízhatóságért."
         ]
       },
       "links": [
-        { "label": { "en": "Portfolio →", "hu": "Portfólió →" }, "url": "https://szczuka.hu/#codelingo" }
+        {
+          "label": {
+            "en": "CodeLingo →",
+            "hu": "CodeLingo →"
+          },
+          "url": "https://szczuka.hu/#codelingo"
+        },
+        {
+          "label": {
+            "en": "BikeStore →",
+            "hu": "BikeStore →"
+          },
+          "url": "https://szczuka.hu/#bikestore"
+        }
       ]
     },
     {
@@ -164,42 +170,94 @@
       },
       "points": {
         "en": [
-          "Led a theater team from initial concept through writing, directing, and live performance at Katakomba Cellar Theater.",
-          "Built the workshop's interactive website with Spline 3D elements and a Next.js ticket booking system with automated capacity management."
+          "Led a 15-person theater team from concept to live performance.",
+          "Developed the interactive website and a Next.js booking system handling 500+ ticket sales with automated capacity management."
         ],
         "hu": [
-          "Vezető szerepet vállaltam egy színházi csapatban az első ötlettől a Katakomba Pinceszínházi bemutatóig.",
-          "Elkészítettem a műhely interaktív weboldalát Spline 3D elemekkel, valamint egy Next.js-alapú jegyfoglalási rendszert automatizált kapacitáskezeléssel."
+          "Egy 15 fős színházi csapat vezetése az első ötlettől a bemutatóig.",
+          "Interaktív weboldal és Next.js jegyfoglalási rendszer fejlesztése, amely több mint 500 jegyeladást kezelt automatizált kapacitáskezeléssel."
         ]
       },
       "links": [
-        { "label": { "en": "Workshop →", "hu": "Műhely →" }, "url": "https://szczuka.hu/#nullpont-workshop" },
-        { "label": { "en": "Booking →", "hu": "Foglalás →" }, "url": "https://szczuka.hu/#nullpont-booking" }
+        {
+          "label": {
+            "en": "Workshop →",
+            "hu": "Műhely →"
+          },
+          "url": "https://szczuka.hu/#nullpont-workshop"
+        }
       ]
     }
   ],
   "techstack": {
     "categories": [
       {
-        "label": { "en": "Backend", "hu": "Backend" },
-        "items": ["C#", "Java", "Python", "SQL", "ASP.NET Core", "Entity Framework Core", "SignalR", "REST API", "JWT", "AutoMapper", "MSTest"]
+        "label": {
+          "en": "Backend",
+          "hu": "Backend"
+        },
+        "items": [
+          "C#",
+          "Java",
+          "Python",
+          "SQL",
+          "ASP.NET Core",
+          "Entity Framework Core",
+          "REST API",
+          "Unit Testing"
+        ]
       },
       {
-        "label": { "en": "Frontend", "hu": "Frontend" },
-        "items": ["TypeScript", "JavaScript", "Angular", "Next.js / React", "RxJS", "HTML", "CSS / SCSS", "Bootstrap"]
+        "label": {
+          "en": "Frontend",
+          "hu": "Frontend"
+        },
+        "items": [
+          "TypeScript",
+          "JavaScript",
+          "Angular",
+          "Next.js / React",
+          "RxJS",
+          "HTML",
+          "CSS / SCSS",
+          "Bootstrap"
+        ]
       },
       {
-        "label": { "en": "Embedded", "hu": "Beágyazott" },
-        "items": ["C++", "ESP32", "Arduino", "PlatformIO", "WebSockets", "PID Control", "Sensor Fusion"]
+        "label": {
+          "en": "Embedded",
+          "hu": "Beágyazott"
+        },
+        "items": [
+          "C++",
+          "ESP32",
+          "Arduino",
+          "PlatformIO",
+          "WebSockets",
+          "PID Control",
+          "Sensor Fusion"
+        ]
       },
       {
-        "label": { "en": "IT & DevOps", "hu": "IT & DevOps" },
-        "items": ["PowerShell", "Azure / Entra ID", "n8n", "GitHub Actions", "CI/CD", "Jira / Confluence", "Linux"]
+        "label": {
+          "en": "IT & DevOps",
+          "hu": "IT & DevOps"
+        },
+        "items": [
+          "Docker",
+          "Cloud Infrastructure",
+          "Azure / Entra ID",
+          "PowerShell",
+          "n8n",
+          "GitHub Actions",
+          "Agile / Scrum",
+          "Linux"
+        ]
       }
     ]
   },
   "studies": {
-    "year": "2022 – Present",
+    "year": "2022 – 2026",
     "degree": {
       "en": "Computer Science Engineering",
       "hu": "Üzemmérnök-informatikus"
@@ -211,30 +269,72 @@
   },
   "languages": [
     {
-      "name": { "en": "English", "hu": "Angol" },
-      "level": { "en": "C1 - Advanced", "hu": "C1 - Haladó" }
+      "name": {
+        "en": "English",
+        "hu": "Angol"
+      },
+      "level": {
+        "en": "C1 - Advanced",
+        "hu": "C1 - Haladó"
+      }
     },
     {
-      "name": { "en": "Hungarian", "hu": "Magyar" },
-      "level": { "en": "Native", "hu": "Anyanyelv" }
+      "name": {
+        "en": "Hungarian",
+        "hu": "Magyar"
+      },
+      "level": {
+        "en": "Native",
+        "hu": "Anyanyelv"
+      }
     }
   ],
   "strengths": {
-    "title": { "en": "Strengths", "hu": "Erősségeim" },
+    "title": {
+      "en": "Strengths",
+      "hu": "Erősségeim"
+    },
     "items": [
-      { "en": "Problem-solving", "hu": "Problémamegoldás" },
-      { "en": "Teamwork", "hu": "Csapatmunka" },
-      { "en": "Communication", "hu": "Kommunikáció" },
-      { "en": "Time Management", "hu": "Időmenedzsment" }
+      {
+        "en": "Problem-solving",
+        "hu": "Problémamegoldás"
+      },
+      {
+        "en": "Teamwork",
+        "hu": "Csapatmunka"
+      },
+      {
+        "en": "Communication",
+        "hu": "Kommunikáció"
+      },
+      {
+        "en": "Time Management",
+        "hu": "Időmenedzsment"
+      }
     ]
   },
   "hobbies": {
-    "title": { "en": "Hobbies", "hu": "Hobbik" },
+    "title": {
+      "en": "Hobbies",
+      "hu": "Hobbik"
+    },
     "items": [
-      { "en": "Mountain biking", "hu": "Hegyi kerékpározás" },
-      { "en": "Guitar & Piano", "hu": "Gitár & Zongora" },
-      { "en": "Acting & Directing", "hu": "Színjátszás & Rendezés" },
-      { "en": "Photography", "hu": "Fényképezés" }
+      {
+        "en": "Mountain biking",
+        "hu": "Hegyi kerékpározás"
+      },
+      {
+        "en": "Guitar & Piano",
+        "hu": "Gitár & Zongora"
+      },
+      {
+        "en": "Acting & Directing",
+        "hu": "Színjátszás & Rendezés"
+      },
+      {
+        "en": "Photography",
+        "hu": "Fényképezés"
+      }
     ]
   }
 }
